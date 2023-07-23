@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,18 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- customizing-code -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "banner-bg": "url('./images/yellow-bg.jpg')",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
     <header>
@@ -58,9 +70,7 @@
             <div class="dropdown dropdown-end">
               <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                 <div class="w-10 rounded-full">
-                  <img
-                    src="./images/avatar.png"
-                  />
+                  <img src="./images/avatar.png" />
                 </div>
               </label>
               <ul
@@ -80,6 +90,23 @@
           </div>
         </div>
       </nav>
+      <!-- banner section using daisy UI's Hero -->
+      <section>
+        <div class="hero min-h-[calc(100vh-66px)] bg-banner-bg">
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+              <p class="mb-5">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                assumenda excepturi exercitationem quasi. In deleniti eaque aut
+                repudiandae et a id nisi.
+              </p>
+              <button class="btn">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
   </body>
 </html>
